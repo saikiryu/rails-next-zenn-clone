@@ -1,0 +1,130 @@
+Started GET "/" for 192.168.65.1 at 2024-07-19 05:44:53 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.4ms | Allocations: 583)
+Completed 200 OK in 116ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 6363)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-19 05:49:25 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.5ms | Allocations: 476)
+Completed 200 OK in 25ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 3817)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-19 06:22:02 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 278)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 989)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-19 06:37:13 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 319)
+
+
+Started GET "/favicon.ico" for 192.168.65.1 at 2024-07-19 06:37:13 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-19 08:12:53 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 147)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-19 08:13:00 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 20)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-19 08:16:23 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 936)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007f126e15e0c8>
+
+    binding.pry
+           ^^^^
+Did you mean?  try):
+  
+app/controllers/api/v1/health_check_controller.rb:4:in `index'
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-19 08:18:03 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 854)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007f126e5a2260>
+
+    binding.pry
+           ^^^^
+Did you mean?  try):
+  
+app/controllers/api/v1/health_check_controller.rb:4:in `index'
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-19 08:18:05 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 753)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007f126e207d08>
+
+    binding.pry
+           ^^^^
+Did you mean?  try):
+  
+app/controllers/api/v1/health_check_controller.rb:4:in `index'
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-19 08:18:06 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 752)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007f126e125520>
+
+    binding.pry
+           ^^^^
+Did you mean?  try):
+  
+app/controllers/api/v1/health_check_controller.rb:4:in `index'
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-19 08:22:46 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Started GET "/" for 192.168.65.1 at 2024-07-19 08:23:47 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.8ms | Allocations: 45963)
+Completed 200 OK in 63ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 303465)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `myapp_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE DATABASE `myapp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+Completed 200 OK in 1921720ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 6776352)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-19 08:54:48 +0000
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-19 08:54:48 +0000
+Started GET "/" for 192.168.65.1 at 2024-07-19 08:54:48 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 283)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1168)
+
+
+Processing by Api::V1::HealthCheckController#index as HTML
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 231)
+
+
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-19 09:01:58 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 91)
+
+
