@@ -128,3 +128,322 @@ Processing by Api::V1::HealthCheckController#index as HTML
 Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 91)
 
 
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 09:41:19 +0000
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 09:41:19 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2817)
+
+
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2371)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 09:44:41 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1965)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 09:44:49 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 103)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 09:44:49 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 12:39:14 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 13:26:55 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 13:50:23 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 91)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 16:55:13 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 10ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 91)
+
+
+  [1m[35m (240.1ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (34.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (20.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseTokenAuthCreateUsers (20240720165828)
+  [1m[35m (49.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `provider` varchar(255) DEFAULT 'email' NOT NULL, `uid` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime(6), `allow_password_change` tinyint(1) DEFAULT FALSE, `remember_created_at` datetime(6), `confirmation_token` varchar(255), `confirmed_at` datetime(6), `confirmation_sent_at` datetime(6), `unconfirmed_email` varchar(255), `name` varchar(255), `nickname` varchar(255), `image` varchar(255), `email` varchar(255), `tokens` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (76.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_uid_and_provider` ON `users` (`uid`, `provider`)[0m
+  [1m[35m (26.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[35m (63.5ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`)[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (22.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240720165828')[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-07-20 16:59:14.857721', '2024-07-20 16:59:14.857721')[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 17:22:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2107)
+
+
+Started GET "/letter_opener" for 192.168.65.1 at 2024-07-20 17:22:12 +0000
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering layout /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/letters.html.erb
+  Rendering /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered collection of /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 35)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (Duration: 14.4ms | Allocations: 1834)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_icon.html.erb (Duration: 0.3ms | Allocations: 88)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_bootstrap.html.erb (Duration: 3.2ms | Allocations: 621)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_letters.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/_styles.html.erb (Duration: 6.4ms | Allocations: 1386)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/js/_jquery.html.erb (Duration: 2.7ms | Allocations: 1907)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/js/_favcount.html.erb (Duration: 0.3ms | Allocations: 304)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/_javascripts.html.erb (Duration: 5.0ms | Allocations: 2808)
+  Rendered layout /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/letters.html.erb (Duration: 35.6ms | Allocations: 7321)
+Completed 200 OK in 852ms (Views: 53.4ms | ActiveRecord: 0.0ms | Allocations: 87746)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 18:29:38 +0000
+Processing by Api::V1::HealthCheckController#index as */*
+Completed 200 OK in 14ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 169)
+
+
+Started POST "/api/v1/auth" for 192.168.65.1 at 2024-07-20 18:36:45 +0000
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:8000", "registration"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:8000"}}
+[31mUnpermitted parameters: :confirm_success_url, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f04aec280d0>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:8000", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:8000"}} }[0m
+[31mUnpermitted parameters: :confirm_success_url, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f04aec280d0>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:8000", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:8000"}} }[0m
+[31mUnpermitted parameters: :confirm_success_url, :registration. Context: { controller: DeviseTokenAuth::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f04aec280d0>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:8000", "controller"=>"devise_token_auth/registrations", "action"=>"create", "registration"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]", "confirm_success_url"=>"http://localhost:8000"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'test1@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'test1@example.com', '$2a$12$6PFHdyLBPlCCuAXP3nLluO23hOmzXkjMtCbD3lrX86AFrYD1ym.o.', NULL, NULL, FALSE, NULL, 'hMdxEtxnyGLJ29DzdJ8B', NULL, '2024-07-20 18:36:45.908223', NULL, NULL, NULL, NULL, 'test1@example.com', NULL, '2024-07-20 18:36:45.907884', '2024-07-20 18:36:45.907884')[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering /usr/local/bundle/gems/devise_token_auth-1.2.3/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered /usr/local/bundle/gems/devise_token_auth-1.2.3/app/views/devise/mailer/confirmation_instructions.html.erb (Duration: 12.1ms | Allocations: 933)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 72.9ms
+Delivered mail 669c03be28567_d3611c178@baab721fc6b3.mail (123.4ms)
+Date: Sat, 20 Jul 2024 18:36:46 +0000
+From: no-replay@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: test1@example.com
+Message-ID: <669c03be28567_d3611c178@baab721fc6b3.mail>
+Subject: =?UTF-8?Q?=E3=83=A1=E3=83=BC=E3=83=AB=E3=82=A2=E3=83=89=E3=83=AC=E3=82=B9=E7=A2=BA=E8=AA=8D=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+client-config: default
+redirect-url: http://localhost:8000
+
+PHA+44KI44GG44GT44GdIHRlc3QxQGV4YW1wbGUuY29tITwvcD4NCg0KPHA+
+5LiL6KiY44Gu44Oq44Oz44Kv44GL44KJ44Ki44Kr44Km44Oz44OI44KS5pyJ
+5Yq55YyW44Gn44GN44G+44GZOiA8L3A+DQoNCjxwPjxhIGhyZWY9Imh0dHA6
+Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvYXV0aC9jb25maXJtYXRpb24/Y29u
+ZmlnPWRlZmF1bHQmY29uZmlybWF0aW9uX3Rva2VuPWhNZHhFdHhueUdMSjI5
+RHpkSjhCJnJlZGlyZWN0X3VybD1odHRwJTNBJTJGJTJGbG9jYWxob3N0JTNB
+ODAwMCI+44Ki44Kr44Km44Oz44OI44KS5pyJ5Yq55YyW44GZ44KLPC9hPjwv
+cD4NCg==
+
+Completed 200 OK in 703ms (Views: 0.3ms | ActiveRecord: 15.8ms | Allocations: 47750)
+
+
+Started GET "/letter_opener" for 192.168.65.1 at 2024-07-20 18:38:07 +0000
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering layout /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/letters.html.erb
+  Rendering /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/_item.html.erb (Duration: 11.1ms | Allocations: 1853)
+  Rendered collection of /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/_item.html.erb [0 times] (Duration: 0.7ms | Allocations: 16)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (Duration: 15.8ms | Allocations: 2352)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_icon.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_bootstrap.html.erb (Duration: 1.3ms | Allocations: 8)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_letters.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/_styles.html.erb (Duration: 3.2ms | Allocations: 191)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/js/_jquery.html.erb (Duration: 1.3ms | Allocations: 11)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/js/_favcount.html.erb (Duration: 0.2ms | Allocations: 10)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/_javascripts.html.erb (Duration: 2.8ms | Allocations: 141)
+  Rendered layout /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/letters.html.erb (Duration: 25.9ms | Allocations: 2893)
+Completed 200 OK in 34ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 3346)
+
+
+Started GET "/letter_opener/1721500606_243066_ed13713/rich" for 192.168.65.1 at 2024-07-20 18:38:07 +0000
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1721500606_243066_ed13713", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (Duration: 0.2ms | Allocations: 14)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 2692)
+
+
+Started GET "/letter_opener/" for 192.168.65.1 at 2024-07-20 18:38:24 +0000
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering layout /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/letters.html.erb
+  Rendering /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/_item.html.erb (Duration: 3.0ms | Allocations: 1357)
+  Rendered collection of /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/_item.html.erb [0 times] (Duration: 0.0ms | Allocations: 16)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (Duration: 5.3ms | Allocations: 1829)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_icon.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_bootstrap.html.erb (Duration: 0.3ms | Allocations: 8)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_letters.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/_styles.html.erb (Duration: 2.2ms | Allocations: 191)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/js/_jquery.html.erb (Duration: 0.4ms | Allocations: 11)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/js/_favcount.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/_javascripts.html.erb (Duration: 1.8ms | Allocations: 141)
+  Rendered layout /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/letters.html.erb (Duration: 14.5ms | Allocations: 2369)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 2834)
+
+
+Started GET "/letter_opener/1721500606_243066_ed13713/rich" for 192.168.65.1 at 2024-07-20 18:38:24 +0000
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1721500606_243066_ed13713", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 629)
+
+
+Started GET "/api/v1/auth/confirmation?config=default&confirmation_token=[FILTERED]&redirect_url=http%3A%2F%2Flocalhost%3A8000" for 192.168.65.1 at 2024-07-20 18:38:30 +0000
+Processing by DeviseTokenAuth::ConfirmationsController#show as HTML
+  Parameters: {"config"=>"default", "confirmation_token"=>"[FILTERED]", "redirect_url"=>"http://localhost:8000"}
+[31mUnpermitted parameters: :config, :redirect_url. Context: { controller: DeviseTokenAuth::ConfirmationsController, action: show, request: #<ActionDispatch::Request:0x00007f04ad2a2958>, params: {"config"=>"default", "confirmation_token"=>"[FILTERED]", "redirect_url"=>"http://localhost:8000", "controller"=>"devise_token_auth/confirmations", "action"=>"show"} }[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'hMdxEtxnyGLJ29DzdJ8B' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (3.8ms)[0m  [1m[33mUPDATE `users` SET `users`.`confirmed_at` = '2024-07-20 18:38:30.612631', `users`.`updated_at` = '2024-07-20 18:38:30.613122' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:8000?account_confirmation_success=true
+Completed 302 Found in 28ms (ActiveRecord: 9.0ms | Allocations: 5542)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 18:38:31 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 159)
+
+
+Started GET "/api/v1/health_check" for 192.168.65.1 at 2024-07-20 18:39:12 +0000
+Processing by Api::V1::HealthCheckController#index as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started POST "/api/v1/auth/sign_in" for 192.168.65.1 at 2024-07-20 18:39:52 +0000
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f04ad2278e8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f04ad2278e8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'test1@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f04ad2278e8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f04ad2278e8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"nG0FMYRLZ5hU0BEIWpNEUA\":{\"token\":\"$2a$10$TZn1DLYSiQbH9qELHE5VtO20r3yujzXew8cN56.AuIi1kwul61aLm\",\"expiry\":1722710392}}', `users`.`updated_at` = '2024-07-20 18:39:52.438501' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 268ms (Views: 0.2ms | ActiveRecord: 9.2ms | Allocations: 7811)
+
+
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 01:52:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Current::UsersController#show as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 235ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 13371)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 01:55:05 +0000
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 144ms (Views: 0.6ms | ActiveRecord: 15.7ms | Allocations: 18475)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 01:59:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.72ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 138ms (Views: 8.5ms | ActiveRecord: 7.2ms | Allocations: 18349)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 01:59:17 +0000
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 1.2ms | Allocations: 2397)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 01:59:28 +0000
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.46ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 1.3ms | Allocations: 2284)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 01:59:29 +0000
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.36ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 1.2ms | Allocations: 2284)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 02:00:41 +0000
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 1.4ms | Allocations: 2284)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 02:02:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 131ms (Views: 3.8ms | ActiveRecord: 8.1ms | Allocations: 18109)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 02:02:20 +0000
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.31ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 1.5ms | Allocations: 2397)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 02:02:37 +0000
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.42ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 1.6ms | ActiveRecord: 1.2ms | Allocations: 2284)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 02:04:17 +0000
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.36ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 1.3ms | Allocations: 2284)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-22 02:06:12 +0000
+Processing by Api::V1::Current::UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+[active_model_serializers] Rendered CurrentUserSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 127ms (Views: 28.3ms | ActiveRecord: 7.1ms | Allocations: 9632)
+
+
