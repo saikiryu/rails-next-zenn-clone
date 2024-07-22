@@ -449,3 +449,246 @@ Completed 200 OK in 127ms (Views: 28.3ms | ActiveRecord: 7.1ms | Allocations: 96
 
   [1m[36mActiveRecord::InternalMetadata Pluck (1.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateArticles (20240722073837)
+  [1m[35m (51.7ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) COMMENT 'タイトル', `content` text COMMENT '本文', `status` int COMMENT 'ステータス（10:未保存, 20:下書き, 30:公開中）', `user_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_articles_on_user_id` (`user_id`), CONSTRAINT `fk_rails_3d31dad1cc`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240722073837')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (53.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_development`[0m
+  [1m[35m (31.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_test`[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE DATABASE `myapp_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE DATABASE `myapp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (17.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseTokenAuthCreateUsers (20240720165828)
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `provider` varchar(255) DEFAULT 'email' NOT NULL, `uid` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime(6), `allow_password_change` tinyint(1) DEFAULT FALSE, `remember_created_at` datetime(6), `confirmation_token` varchar(255), `confirmed_at` datetime(6), `confirmation_sent_at` datetime(6), `unconfirmed_email` varchar(255), `name` varchar(255), `nickname` varchar(255), `image` varchar(255), `email` varchar(255), `tokens` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (23.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_uid_and_provider` ON `users` (`uid`, `provider`)[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240720165828')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateArticles (20240722073837)
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) COMMENT 'タイトル', `content` text COMMENT '本文', `status` int COMMENT 'ステータス（10:未保存, 20:下書き, 30:公開中）', `user_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_articles_on_user_id` (`user_id`), CONSTRAINT `fk_rails_3d31dad1cc`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240722073837')[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-07-22 09:03:27.523488', '2024-07-22 09:03:27.523488')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'test1@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'test1@example.com', '$2a$12$.gtLXTz6IaQ8BWsd4znxuenOSFmUIYvH3b5qsCtSljsiJ.WWThday', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 09:03:35.481757', NULL, NULL, 'テスト太郎', NULL, NULL, 'test1@example.com', NULL, '2024-07-22 09:03:35.674703', '2024-07-22 09:03:35.674703')[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'test2@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'test2@example.com', '$2a$12$CE4bGKpsewbL.XEk/UMlx.JKHzdybQkT6wcpd69Xnfw0Rl7G9PN4G', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 09:03:35.676878', NULL, NULL, 'テスト次郎', NULL, NULL, 'test2@example.com', NULL, '2024-07-22 09:03:35.849415', '2024-07-22 09:03:35.849415')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-0', 'テスト本文1-0', 30, 1, '2024-07-22 09:03:35.866850', '2024-07-22 09:03:35.866850')[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-0', 'テスト本文2-0', 30, 2, '2024-07-22 09:03:35.869052', '2024-07-22 09:03:35.869052')[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-1', 'テスト本文1-1', 30, 1, '2024-07-22 09:03:35.871213', '2024-07-22 09:03:35.871213')[0m
+  [1m[36mArticle Create (0.9ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-1', 'テスト本文2-1', 30, 2, '2024-07-22 09:03:35.873295', '2024-07-22 09:03:35.873295')[0m
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-2', 'テスト本文1-2', 30, 1, '2024-07-22 09:03:35.875360', '2024-07-22 09:03:35.875360')[0m
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-2', 'テスト本文2-2', 30, 2, '2024-07-22 09:03:35.877059', '2024-07-22 09:03:35.877059')[0m
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-3', 'テスト本文1-3', 30, 1, '2024-07-22 09:03:35.878404', '2024-07-22 09:03:35.878404')[0m
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-3', 'テスト本文2-3', 30, 2, '2024-07-22 09:03:35.880479', '2024-07-22 09:03:35.880479')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-4', 'テスト本文1-4', 30, 1, '2024-07-22 09:03:35.882138', '2024-07-22 09:03:35.882138')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-4', 'テスト本文2-4', 30, 2, '2024-07-22 09:03:35.883521', '2024-07-22 09:03:35.883521')[0m
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-5', 'テスト本文1-5', 30, 1, '2024-07-22 09:03:35.885077', '2024-07-22 09:03:35.885077')[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-5', 'テスト本文2-5', 30, 2, '2024-07-22 09:03:35.893373', '2024-07-22 09:03:35.893373')[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-6', 'テスト本文1-6', 30, 1, '2024-07-22 09:03:35.915313', '2024-07-22 09:03:35.915313')[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-6', 'テスト本文2-6', 30, 2, '2024-07-22 09:03:35.930458', '2024-07-22 09:03:35.930458')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-7', 'テスト本文1-7', 30, 1, '2024-07-22 09:03:35.935063', '2024-07-22 09:03:35.935063')[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-7', 'テスト本文2-7', 30, 2, '2024-07-22 09:03:35.945929', '2024-07-22 09:03:35.945929')[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-8', 'テスト本文1-8', 30, 1, '2024-07-22 09:03:35.973907', '2024-07-22 09:03:35.973907')[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-8', 'テスト本文2-8', 30, 2, '2024-07-22 09:03:35.982512', '2024-07-22 09:03:35.982512')[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-9', 'テスト本文1-9', 30, 1, '2024-07-22 09:03:35.984993', '2024-07-22 09:03:35.984993')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-9', 'テスト本文2-9', 30, 2, '2024-07-22 09:03:35.987026', '2024-07-22 09:03:35.987026')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-10', 'テスト本文1-10', 30, 1, '2024-07-22 09:03:35.988926', '2024-07-22 09:03:35.988926')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-10', 'テスト本文2-10', 30, 2, '2024-07-22 09:03:35.990894', '2024-07-22 09:03:35.990894')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-11', 'テスト本文1-11', 30, 1, '2024-07-22 09:03:35.992751', '2024-07-22 09:03:35.992751')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-11', 'テスト本文2-11', 30, 2, '2024-07-22 09:03:35.994446', '2024-07-22 09:03:35.994446')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-12', 'テスト本文1-12', 30, 1, '2024-07-22 09:03:35.996406', '2024-07-22 09:03:35.996406')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-12', 'テスト本文2-12', 30, 2, '2024-07-22 09:03:35.998175', '2024-07-22 09:03:35.998175')[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-13', 'テスト本文1-13', 30, 1, '2024-07-22 09:03:35.999953', '2024-07-22 09:03:35.999953')[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-13', 'テスト本文2-13', 30, 2, '2024-07-22 09:03:36.001919', '2024-07-22 09:03:36.001919')[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル1-14', 'テスト本文1-14', 30, 1, '2024-07-22 09:03:36.003804', '2024-07-22 09:03:36.003804')[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('テストタイトル2-14', 'テスト本文2-14', 30, 2, '2024-07-22 09:03:36.005624', '2024-07-22 09:03:36.005624')[0m
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/auth/sign_in" for 192.168.65.1 at 2024-07-22 09:05:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007ff7267c08d8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007ff7267c08d8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'test1@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007ff7267c08d8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007ff7267c08d8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"WDKpLwLKxANnw9OOuTVYog\":{\"token\":\"$2a$10$eUSTWTHNgfHU6iK7PfNU3.uH9cl7K72gh63Yaa0Pf1FFXQ4qTWS7i\",\"expiry\":1722848735}}', `users`.`updated_at` = '2024-07-22 09:05:35.856562' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 270ms (Views: 1.0ms | ActiveRecord: 5.6ms | Allocations: 13809)
+
+
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/api/v1/articles/1" for 192.168.65.1 at 2024-07-22 09:23:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ArticlesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 AND `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:3:in `show'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `show'
+[active_model_serializers] Rendered ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (24.22ms)
+Completed 200 OK in 89ms (Views: 57.2ms | ActiveRecord: 7.1ms | Allocations: 24923)
+
+
+Started GET "/api/v1/articles" for 192.168.65.1 at 2024-07-22 09:29:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/myapp/app/controllers/api/v1/articles_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/articles_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/articles_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/v1/articles" for 192.168.65.1 at 2024-07-22 09:30:09 +0000
+  
+SyntaxError (/myapp/app/controllers/api/v1/articles_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/articles_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/articles_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/v1/articles" for 192.168.65.1 at 2024-07-22 09:30:11 +0000
+  
+SyntaxError (/myapp/app/controllers/api/v1/articles_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/articles_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/articles_controller.rb:9: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/v1/articles" for 192.168.65.1 at 2024-07-22 09:31:15 +0000
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (59.53ms)
+Completed 200 OK in 132ms (Views: 99.4ms | ActiveRecord: 10.7ms | Allocations: 36143)
+
+
+Started GET "/api/v1/articles" for 192.168.65.1 at 2024-07-22 09:51:00 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (100.47ms)
+Completed 200 OK in 141ms (Views: 118.1ms | ActiveRecord: 7.7ms | Allocations: 42167)
+
+
+user: root
+GET /api/v1/articles
+USE eager loading detected
+  Article => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /myapp/app/controllers/api/v1/articles_controller.rb:4:in `index'
+
+
+Started GET "/api/v1/articles" for 192.168.65.1 at 2024-07-22 09:52:14 +0000
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.24ms)
+Completed 200 OK in 43ms (Views: 30.4ms | ActiveRecord: 6.7ms | Allocations: 22224)
+
+
+Started GET "/api/v1/articles" for 192.168.65.1 at 2024-07-22 10:02:24 +0000
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (8.22ms)
+Completed 200 OK in 48ms (Views: 30.7ms | ActiveRecord: 3.9ms | Allocations: 23035)
+
+
+Started GET "/api/v1/articles" for 192.168.65.1 at 2024-07-22 10:02:26 +0000
+Processing by Api::V1::ArticlesController#index as */*
+  [1m[36mArticle Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (8.66ms)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 1.3ms | Allocations: 14175)
+
+

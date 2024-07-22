@@ -1,0 +1,8 @@
+2024-07-22 09:51:00[WARN] user: root
+GET /api/v1/articles
+USE eager loading detected
+  Article => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /myapp/app/controllers/api/v1/articles_controller.rb:4:in `index'
+

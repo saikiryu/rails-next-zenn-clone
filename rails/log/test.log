@@ -48,3 +48,735 @@ Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2281)
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', '5337ba2030978990ed0bd02dc960e9a4f316abca', '2024-07-22 02:44:20.648622', '2024-07-22 02:44:20.648622')[0m
   [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '1_test@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '1_test@example.com', '$2a$04$Z04B76jYBeDk7KphGSisD.850wUEAXN7fbW10se.fG18gwf9QICt6', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 03:49:15.656794', NULL, NULL, '田中太郎', NULL, NULL, '1_test@example.com', NULL, '2024-07-22 03:49:15.661145', '2024-07-22 03:49:15.661145')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '1_test@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '1_test@example.com', '$2a$04$186x7Bg8OmJD7GjpdJYCQOMc2bPFEhiP9wjoGOXk/42YC9bTzo8Fq', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 03:51:09.148412', NULL, NULL, '田中太郎', NULL, NULL, '1_test@example.com', NULL, '2024-07-22 03:51:09.152916', '2024-07-22 03:51:09.152916')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '1darnell@jacobson.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '1darnell@jacobson.example', '$2a$04$NMDh788eVjNFhHtaPk2gzeh/e6zZOgBSEvY6KBXYIn0Ieb9zO4x3G', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 06:02:14.733630', NULL, NULL, '安藤 輝', NULL, NULL, '1darnell@jacobson.example', NULL, '2024-07-22 06:02:14.737343', '2024-07-22 06:02:14.737343')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '1noe@gutkowski.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '1noe@gutkowski.example', '$2a$04$1xt/Oqq/QQQcaIM55SShau2bqFbaRUWuF2Y9n2IsK5JIkh8SJWf7W', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 06:15:10.183041', NULL, NULL, '柴田 未来', NULL, NULL, '1noe@gutkowski.example', NULL, '2024-07-22 06:15:10.186738', '2024-07-22 06:15:10.186738')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"lc09Tec_motezrD6yOK6MA\":{\"token\":\"$2a$04$t92s93K66Oj2xcqsXfBmoeDtvnIY17gCfT31sE3xbEaZTkygcy/aq\",\"expiry\":1722838510,\"updated_at\":\"2024-07-22T06:15:10Z\"}}', `users`.`updated_at` = '2024-07-22 06:15:10.194979' WHERE `users`.`id` = 4[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/current/user" for 127.0.0.1 at 2024-07-22 06:15:10 +0000
+Processing by Api::V1::Current::UsersController#show as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = '1noe@gutkowski.example' LIMIT 1[0m
+[active_model_serializers] Rendered CurrentUserSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Completed 200 OK in 33ms (Views: 7.6ms | ActiveRecord: 1.3ms | Allocations: 4963)
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/api/v1/current/user" for 127.0.0.1 at 2024-07-22 06:15:10 +0000
+Processing by Api::V1::Current::UsersController#show as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 831)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (70.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_test`[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE DATABASE `myapp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (3.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (42.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `provider` varchar(255) DEFAULT 'email' NOT NULL, `uid` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime(6), `allow_password_change` tinyint(1) DEFAULT FALSE, `remember_created_at` datetime(6), `confirmation_token` varchar(255), `confirmed_at` datetime(6), `confirmation_sent_at` datetime(6), `unconfirmed_email` varchar(255), `name` varchar(255), `nickname` varchar(255), `image` varchar(255), `email` varchar(255), `tokens` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, UNIQUE INDEX `index_users_on_confirmation_token` (`confirmation_token`), UNIQUE INDEX `index_users_on_email` (`email`), UNIQUE INDEX `index_users_on_reset_password_token` (`reset_password_token`), UNIQUE INDEX `index_users_on_uid_and_provider` (`uid`, `provider`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (20.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20240720165828)[0m
+  [1m[35m (24.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'test', '2024-07-22 07:38:44.278978', '2024-07-22 07:38:44.278978')[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', '5337ba2030978990ed0bd02dc960e9a4f316abca', '2024-07-22 07:38:44.324514', '2024-07-22 07:38:44.324514')[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (31.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_test`[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE DATABASE `myapp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (3.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `articles` CASCADE[0m
+  [1m[35m (40.5ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) COMMENT 'タイトル', `content` text COMMENT '本文', `status` int COMMENT 'ステータス（10:未保存, 20:下書き, 30:公開中）', `user_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_articles_on_user_id` (`user_id`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `provider` varchar(255) DEFAULT 'email' NOT NULL, `uid` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime(6), `allow_password_change` tinyint(1) DEFAULT FALSE, `remember_created_at` datetime(6), `confirmation_token` varchar(255), `confirmed_at` datetime(6), `confirmation_sent_at` datetime(6), `unconfirmed_email` varchar(255), `name` varchar(255), `nickname` varchar(255), `image` varchar(255), `email` varchar(255), `tokens` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, UNIQUE INDEX `index_users_on_confirmation_token` (`confirmation_token`), UNIQUE INDEX `index_users_on_email` (`email`), UNIQUE INDEX `index_users_on_reset_password_token` (`reset_password_token`), UNIQUE INDEX `index_users_on_uid_and_provider` (`uid`, `provider`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (79.8ms)[0m  [1m[35mALTER TABLE `articles` ADD CONSTRAINT `fk_rails_3d31dad1cc`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (24.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20240722073837)[0m
+  [1m[35m (6.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20240720165828);
+
+[0m
+  [1m[35m (23.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'test', '2024-07-22 07:56:44.344372', '2024-07-22 07:56:44.344372')[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', '2b17a1222048bede2e6736a99ef66052f5579bbc', '2024-07-22 07:56:44.355850', '2024-07-22 07:56:44.355850')[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Count (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '1vincent@brekke.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '1vincent@brekke.example', '$2a$04$/Zok9QzCd4d8pMGe6iU90ObpZ.s6s62A8ZSEzI6jaLLKHtrRbqjA.', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 08:05:53.096768', NULL, NULL, '木村 楓', NULL, NULL, '1vincent@brekke.example', NULL, '2024-07-22 08:05:53.100436', '2024-07-22 08:05:53.100436')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '2dale@renner-hand.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '2dale@renner-hand.test', '$2a$04$5Q62gfx.n4q/FT2LkqAehujXg7O8rY/x7oGGflazxjt5DznZeg/IG', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 08:05:53.164737', NULL, NULL, '山下 悠真', NULL, NULL, '2dale@renner-hand.test', NULL, '2024-07-22 08:05:53.168068', '2024-07-22 08:05:53.168068')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '3benjamin@dooley.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '3benjamin@dooley.example', '$2a$04$FoFmAue4EepVt0jHjymfV.UoNlzgfTJhyHGl6I.UQrJwF3AoYdO0a', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 08:05:53.181961', NULL, NULL, '新井 陽斗', NULL, NULL, '3benjamin@dooley.example', NULL, '2024-07-22 08:05:53.184580', '2024-07-22 08:05:53.184580')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '4shannon@streich-lockman.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '4shannon@streich-lockman.example', '$2a$04$smZKCuRESt.Sz2htPkZr9uTFOiuQP.43jm3DknTaNWX5A6ijEFm4C', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 08:05:53.196326', NULL, NULL, '武田 颯', NULL, NULL, '4shannon@streich-lockman.example', NULL, '2024-07-22 08:05:53.199389', '2024-07-22 08:05:53.199389')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '5tomika@wisoky.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '5tomika@wisoky.example', '$2a$04$ncyvXVmHbQgFCMBdGkCuCODOF5arPZ9QGyWLzgYZvMpohJ2OR7lLu', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 08:05:53.211113', NULL, NULL, '森田 颯太', NULL, NULL, '5tomika@wisoky.example', NULL, '2024-07-22 08:05:53.214011', '2024-07-22 08:05:53.214011')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '1peg@rowe-turner.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '1peg@rowe-turner.example', '$2a$04$Pbd.569r0pRoatGRLhUs.eAWhhddS3TmkqE9.TTQgq4jli13YEl3a', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 08:07:33.517687', NULL, NULL, '菅原 颯太', NULL, NULL, '1peg@rowe-turner.example', NULL, '2024-07-22 08:07:33.521921', '2024-07-22 08:07:33.521921')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (3.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('近視じぞう輸出下着。', '活用ひきさくどろ。電話きひん唄う。親切見当たる復旧。', 30, 6, '2024-07-22 08:07:33.531576', '2024-07-22 08:07:33.531576')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mArticle Count (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '2benny.wyman@olson-mcglynn.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '2benny.wyman@olson-mcglynn.example', '$2a$04$M8jgLlG5KqPMNiaLPrU2QOu8g.PzbXDOkdZu6MMX.yx1Ur1b1Yng.', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 08:07:33.575765', NULL, NULL, '新井 蒼', NULL, NULL, '2benny.wyman@olson-mcglynn.example', NULL, '2024-07-22 08:07:33.578584', '2024-07-22 08:07:33.578584')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '3jay@murphy-gleason.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '3jay@murphy-gleason.example', '$2a$04$QgZlN0Tw9vXuYJZen/5nS.sbHfBVq6V3mwHdTfnvMrV/y3/IAB.hK', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 08:07:33.590332', NULL, NULL, '金子 大樹', NULL, NULL, '3jay@murphy-gleason.example', NULL, '2024-07-22 08:07:33.592953', '2024-07-22 08:07:33.592953')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '4migdalia.white@douglas-ebert.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '4migdalia.white@douglas-ebert.example', '$2a$04$5MYyjC6ISDLb2FTyeUSKKuW.CZv1EO0zjFP2wbsfkAJtgYy1PuyXa', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 08:07:33.606276', NULL, NULL, '山下 舞', NULL, NULL, '4migdalia.white@douglas-ebert.example', NULL, '2024-07-22 08:07:33.609022', '2024-07-22 08:07:33.609022')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '5archie@huel.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '5archie@huel.test', '$2a$04$RhDYAoqwi/VWCvImDlfzK.uYLdZQfD9B16zQujTvi7uNEt3X0wfTe', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 08:07:33.620713', NULL, NULL, '岡本 樹', NULL, NULL, '5archie@huel.test', NULL, '2024-07-22 08:07:33.623229', '2024-07-22 08:07:33.623229')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 10 AND `articles`.`status` = 10[0m
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('しえんする無糖たいりくぐん。', '閉めるつぎつぎこうおつ。春休み牛乳しゃくや。悲しみ難しい隆起。', 10, 10, '2024-07-22 08:07:33.665788', '2024-07-22 08:07:33.665788')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 10 AND `articles`.`status` = 10[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS `myapp_test`[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE DATABASE `myapp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `articles` CASCADE[0m
+  [1m[35m (21.9ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) COMMENT 'タイトル', `content` text COMMENT '本文', `status` int COMMENT 'ステータス（10:未保存, 20:下書き, 30:公開中）', `user_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_articles_on_user_id` (`user_id`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (30.2ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `provider` varchar(255) DEFAULT 'email' NOT NULL, `uid` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime(6), `allow_password_change` tinyint(1) DEFAULT FALSE, `remember_created_at` datetime(6), `confirmation_token` varchar(255), `confirmed_at` datetime(6), `confirmation_sent_at` datetime(6), `unconfirmed_email` varchar(255), `name` varchar(255), `nickname` varchar(255), `image` varchar(255), `email` varchar(255), `tokens` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, UNIQUE INDEX `index_users_on_confirmation_token` (`confirmation_token`), UNIQUE INDEX `index_users_on_email` (`email`), UNIQUE INDEX `index_users_on_reset_password_token` (`reset_password_token`), UNIQUE INDEX `index_users_on_uid_and_provider` (`uid`, `provider`)) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci[0m
+  [1m[35m (53.4ms)[0m  [1m[35mALTER TABLE `articles` ADD CONSTRAINT `fk_rails_3d31dad1cc`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (3.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20240722073837)[0m
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20240720165828);
+
+[0m
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'test', '2024-07-22 09:16:19.603556', '2024-07-22 09:16:19.603556')[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('schema_sha1', '2b17a1222048bede2e6736a99ef66052f5579bbc', '2024-07-22 09:16:19.614667', '2024-07-22 09:16:19.614667')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'schema_sha1' LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '1janell@gutkowski-durgan.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '1janell@gutkowski-durgan.test', '$2a$04$FoGzSpb/5GZeFCb.VWmMtei2AnoucY9hd8hb.uBAQnO5n9m/hY04.', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.273342', NULL, NULL, '佐藤 蓮', NULL, NULL, '1janell@gutkowski-durgan.test', NULL, '2024-07-22 10:11:38.276360', '2024-07-22 10:11:38.276360')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('飽くまでもちょさくけん見当たる先ず。', '賢明病床桜色。さいほう無糖魅力。馬鹿馬鹿しい天井十台。', 30, 1, '2024-07-22 10:11:38.283147', '2024-07-22 10:11:38.283147')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '2elinore@pagac.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '2elinore@pagac.test', '$2a$04$PAqyU0qLoqq1EQmn6ajwFuzYiggGdAdXDq1JKzVF.gDF3HVowRPaK', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.287591', NULL, NULL, '近藤 悠真', NULL, NULL, '2elinore@pagac.test', NULL, '2024-07-22 10:11:38.289307', '2024-07-22 10:11:38.289307')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('憂いことばつきつまる委員。', 'じぶん老齢誤用。警官はっぽうすいせん。奉仕おりめまぎらす。', 30, 2, '2024-07-22 10:11:38.292701', '2024-07-22 10:11:38.292701')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '3emelina@kunde.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '3emelina@kunde.example', '$2a$04$YzXYmcovEG2LC8OtCgLAHe36DIyF4/Qwx2vWw5aiTJu5GNDrH8Vou', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.297090', NULL, NULL, '渡辺 茜', NULL, NULL, '3emelina@kunde.example', NULL, '2024-07-22 10:11:38.298849', '2024-07-22 10:11:38.298849')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('誤用たらす白菊こうぞく。', '殻浸すよくげつ。こはんせいぞうじょうき。隆起とふめいし。', 30, 3, '2024-07-22 10:11:38.301727', '2024-07-22 10:11:38.301727')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '4scottie@kunde.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '4scottie@kunde.test', '$2a$04$vJdsh4Ujz5LjMkt13u2FwuxwmwsrLvEvqOr/UR8stJtXBs4JkE0nm', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.305730', NULL, NULL, '近藤 玲奈', NULL, NULL, '4scottie@kunde.test', NULL, '2024-07-22 10:11:38.307865', '2024-07-22 10:11:38.307865')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('はりい妥協する暴力検査。', '避ける誘惑暇。廉価ぞくご暇。ひきさく救急車かくじっけん。', 30, 4, '2024-07-22 10:11:38.311390', '2024-07-22 10:11:38.311390')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '5anamaria.bailey@gusikowski-kunze.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '5anamaria.bailey@gusikowski-kunze.example', '$2a$04$A/ANgyWnxy/MaOOtJnA1I.LAfQQieFNI65P3k.jFZrFTcTTjhZ.si', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.315581', NULL, NULL, '山本 七海', NULL, NULL, '5anamaria.bailey@gusikowski-kunze.example', NULL, '2024-07-22 10:11:38.317306', '2024-07-22 10:11:38.317306')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('あしくびごじゅう黒板かんぜん。', '独裁恨み人口。浮世絵浅い地面。勇気礎閉める。', 30, 5, '2024-07-22 10:11:38.320035', '2024-07-22 10:11:38.320035')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '6tad_schmitt@beer.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '6tad_schmitt@beer.test', '$2a$04$H3y9QSAj72.k2OiGgN9jK.xgDv0SS1IFvIjpirU9ag3OYVDigu/D.', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.324044', NULL, NULL, '斉藤 芽衣', NULL, NULL, '6tad_schmitt@beer.test', NULL, '2024-07-22 10:11:38.326170', '2024-07-22 10:11:38.326170')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('へいがい桜色あつかいたつ。', '堀川救急車ししょく。ちあんはんだんするかいじゅう。たいりくむぜい黒板。', 30, 6, '2024-07-22 10:11:38.329357', '2024-07-22 10:11:38.329357')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '7bennie.ortiz@streich.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '7bennie.ortiz@streich.example', '$2a$04$ox8.THtX1bufzpRYVJc08.BwKFnyMZS0929iPTxHLJzmGlGLPq0ly', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.333512', NULL, NULL, '野口 陽菜', NULL, NULL, '7bennie.ortiz@streich.example', NULL, '2024-07-22 10:11:38.335180', '2024-07-22 10:11:38.335180')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('戦没休日いく泳ぐ。', 'みなもとかんそくほ。誘惑白菊しゃっか。じゅうどう希望するきひん。', 30, 7, '2024-07-22 10:11:38.337967', '2024-07-22 10:11:38.337967')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '8herman@moore.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '8herman@moore.test', '$2a$04$hzghgohCDYbPC6nOkpZngOA9q3J9finKbHM.WBJyl6XUA3a6Zs3pS', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.342172', NULL, NULL, '佐野 陸', NULL, NULL, '8herman@moore.test', NULL, '2024-07-22 10:11:38.344442', '2024-07-22 10:11:38.344442')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('黙る左手しきもう右利き。', 'へいがい問題あびる。体重減俸妥協する。とりあえず間隔ようい。', 30, 8, '2024-07-22 10:11:38.347404', '2024-07-22 10:11:38.347404')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '9reinaldo@schuppe.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '9reinaldo@schuppe.test', '$2a$04$dDwsz0wP5Ca2.5tcmBziFOLX0VD3kvhL1.4Gi7UZj.ZoQg1V1xu2G', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.351442', NULL, NULL, '野口 優奈', NULL, NULL, '9reinaldo@schuppe.test', NULL, '2024-07-22 10:11:38.353026', '2024-07-22 10:11:38.353026')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('悲しみ宜しくおかねおんとう。', 'つばさ果てるおりめ。無駄消す暇。弱虫はなぢ先週。', 30, 9, '2024-07-22 10:11:38.355892', '2024-07-22 10:11:38.355892')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '10tomas@fahey.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '10tomas@fahey.test', '$2a$04$WrXX3vHpFZ2B1s/.pIlPKOlvU8JY1fcLpyOjoCxT2ZCRfPUFhd3DK', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.360536', NULL, NULL, '藤本 駿', NULL, NULL, '10tomas@fahey.test', NULL, '2024-07-22 10:11:38.362584', '2024-07-22 10:11:38.362584')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('ちあん雇用始まる察知。', 'とふ果てるいつ頃。出版提案するよぼう。不可欠こうちょくほんらい。', 30, 10, '2024-07-22 10:11:38.365471', '2024-07-22 10:11:38.365471')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '11arron_ortiz@ortiz.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '11arron_ortiz@ortiz.test', '$2a$04$gWT55KKMhSH3uTmwR0xG1O7krdkcIfmOAhGJGsNhhzw/OrO/ezboO', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.369525', NULL, NULL, '内田 一輝', NULL, NULL, '11arron_ortiz@ortiz.test', NULL, '2024-07-22 10:11:38.371086', '2024-07-22 10:11:38.371086')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('先週ぶそうこいぬきもち。', '揺さぶる塾生無糖。秘めるがんばる明治。明治いくりゅうこうご。', 30, 11, '2024-07-22 10:11:38.374171', '2024-07-22 10:11:38.374171')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '12cherilyn@stehr.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '12cherilyn@stehr.example', '$2a$04$utASXPy1n3dj0pv/eDF0E.cVFSjKqlGS0qzlItLBo8EGcJmv0jSDS', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.378797', NULL, NULL, '武田 智子', NULL, NULL, '12cherilyn@stehr.example', NULL, '2024-07-22 10:11:38.380762', '2024-07-22 10:11:38.380762')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('しゃこなんべい色盲禍根。', '病床譜面きひん。しょうがっこうりょうどじじょでん。はじめておどろくがいよう。', 30, 12, '2024-07-22 10:11:38.383821', '2024-07-22 10:11:38.383821')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '13corazon@larson-considine.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '13corazon@larson-considine.test', '$2a$04$pm7oiDJG5vjr6ylpd1bMsOI4y19fk4l1ie2FP2zX9azq0i/dMe8Le', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.387860', NULL, NULL, '藤本 愛', NULL, NULL, '13corazon@larson-considine.test', NULL, '2024-07-22 10:11:38.389623', '2024-07-22 10:11:38.389623')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('電源むらさきいろ推奨迷路。', 'そあく済ます委員。体重核実験たて。どろ部首見当たる。', 30, 13, '2024-07-22 10:11:38.392947', '2024-07-22 10:11:38.392947')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '14annie_becker@mohr-nicolas.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '14annie_becker@mohr-nicolas.test', '$2a$04$KQ4Uz./FhUhdl0nTRmofHekjQvkVDytsnZnAEqIB6Y5vaFcBN6j1S', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.397262', NULL, NULL, '小島 玲奈', NULL, NULL, '14annie_becker@mohr-nicolas.test', NULL, '2024-07-22 10:11:38.399106', '2024-07-22 10:11:38.399106')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('騎兵とうさん憂い米国。', '報じるこうつうじぶん。平安馬みなと。じっかんやしなう鈍器。', 30, 14, '2024-07-22 10:11:38.401934', '2024-07-22 10:11:38.401934')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '15emmitt@mayert-swaniawski.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '15emmitt@mayert-swaniawski.test', '$2a$04$4YVIvc2/KcbfcStM0LudNeIftpxB9oMegiU.2GfjtxPHdLsgGEq6u', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.405895', NULL, NULL, '工藤 優衣', NULL, NULL, '15emmitt@mayert-swaniawski.test', NULL, '2024-07-22 10:11:38.407760', '2024-07-22 10:11:38.407760')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('たいこうするきげんご洋服もうす。', 'しゅしょうやしなうあおい。平安しゃこ牛乳。高値うえるりょうど。', 30, 15, '2024-07-22 10:11:38.411368', '2024-07-22 10:11:38.411368')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '16jaimee.beahan@dooley.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '16jaimee.beahan@dooley.example', '$2a$04$uLDRuH14QD5er6UvNc1GEu1dEfeaJLz1Bk7lhcy/Zoxgi1tEUyp.C', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.415657', NULL, NULL, '今井 綾乃', NULL, NULL, '16jaimee.beahan@dooley.example', NULL, '2024-07-22 10:11:38.417488', '2024-07-22 10:11:38.417488')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('がんばるがいよう体重出版。', 'しょうゆ防犯無糖。憂い礎防犯。堀川色盲新婚旅行。', 30, 16, '2024-07-22 10:11:38.420472', '2024-07-22 10:11:38.420472')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '17sandi_jast@okon-vonrueden.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '17sandi_jast@okon-vonrueden.example', '$2a$04$atwyw/kIIefYYpG60R6PMuTma2cDGeXbNMLnN4Kw3xPBJjEdnrnlC', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.424665', NULL, NULL, '池田 杏奈', NULL, NULL, '17sandi_jast@okon-vonrueden.example', NULL, '2024-07-22 10:11:38.426988', '2024-07-22 10:11:38.426988')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('下さいよくげつまつふかさ。', '病床はりいちょさくけん。廃墟普及店。〜系廃墟済ます。', 30, 17, '2024-07-22 10:11:38.430256', '2024-07-22 10:11:38.430256')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '18angelo@hermiston.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '18angelo@hermiston.example', '$2a$04$em1VvrbgmqngZaYNRY3qG..Q3ieanPek3BPNIKZ6sIl/AtHpdjZDm', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.434442', NULL, NULL, '金子 未来', NULL, NULL, '18angelo@hermiston.example', NULL, '2024-07-22 10:11:38.436180', '2024-07-22 10:11:38.436180')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('雑音はりいかいたく約する。', 'だいどころこの頃退く。この頃壮年つばさ。たてまほうつかいこの頃。', 30, 18, '2024-07-22 10:11:38.438896', '2024-07-22 10:11:38.438896')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '19marcie@jast.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '19marcie@jast.example', '$2a$04$TKsCNQrXXJM3HvRdXlgFDe9IPOGVNzVhOnoqAhjqt7t3Y6boMCTTK', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.443514', NULL, NULL, '原 美穂', NULL, NULL, '19marcie@jast.example', NULL, '2024-07-22 10:11:38.445654', '2024-07-22 10:11:38.445654')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('さきまわりいじんきょうふこの頃。', '品詞かんぜんしばふ。さいほう独裁高値。親切総括送る。', 30, 19, '2024-07-22 10:11:38.448597', '2024-07-22 10:11:38.448597')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '20caroline@koelpin.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '20caroline@koelpin.test', '$2a$04$DJ1hROdhjXNqS3.ZhzNlKuFgImlSwkafs.UWp/cyXj/MOYBg9m7KW', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.452618', NULL, NULL, '渡辺 優', NULL, NULL, '20caroline@koelpin.test', NULL, '2024-07-22 10:11:38.454309', '2024-07-22 10:11:38.454309')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('かんそくフランス語問題せいぞう。', 'ちあん手作り問題。あうハチのすあつい。ひんきゃく手作り約する。', 30, 20, '2024-07-22 10:11:38.457312', '2024-07-22 10:11:38.457312')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '21gerry@flatley.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '21gerry@flatley.example', '$2a$04$TKQMZe7Ncf8PD29h/QHYIOD8hJ/WzgJKf2fY.5/0yXfkA03PwvF32', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.462065', NULL, NULL, '松田 美桜', NULL, NULL, '21gerry@flatley.example', NULL, '2024-07-22 10:11:38.464038', '2024-07-22 10:11:38.464038')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('提案するじぎする遺失たまご。', '半額じょうだんハチのす。地面無駄ちゅうもんする。かつ没落おきゃくさん。', 30, 21, '2024-07-22 10:11:38.467124', '2024-07-22 10:11:38.467124')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '22isaiah.zieme@lind.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '22isaiah.zieme@lind.example', '$2a$04$OMxndizES7IAJ.lH74pBpeaWQ.c9G27D4otDuBcnnIyZh850Uf5fm', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.471174', NULL, NULL, '伊藤 愛', NULL, NULL, '22isaiah.zieme@lind.example', NULL, '2024-07-22 10:11:38.473035', '2024-07-22 10:11:38.473035')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('しばふとくに春休みもはん。', '騎兵浸すよぼう。出版不健康ざんぴん。はなはだ羊毛かいぞく。', 30, 22, '2024-07-22 10:11:38.476393', '2024-07-22 10:11:38.476393')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '23cher.bartoletti@green.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '23cher.bartoletti@green.test', '$2a$04$ilweJsccVc0SpLTy6JwZKeAb9KuQAlHMZQZzQJnw8OoUSRjZevWAO', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.480735', NULL, NULL, '山口 翔太', NULL, NULL, '23cher.bartoletti@green.test', NULL, '2024-07-22 10:11:38.482592', '2024-07-22 10:11:38.482592')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('上手たつ先週運ぶ。', '安泰床おりめ。けいじばんぶんあしくび。お盆米国ごじゅう。', 30, 23, '2024-07-22 10:11:38.485496', '2024-07-22 10:11:38.485496')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '24remedios_considine@fay-hilpert.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '24remedios_considine@fay-hilpert.test', '$2a$04$dyiEK3hSb1ll/2syz6GwXOoXThAIMHKOl07tJBv9S/qQcz3S7.uKC', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.489339', NULL, NULL, '池田 美緒', NULL, NULL, '24remedios_considine@fay-hilpert.test', NULL, '2024-07-22 10:11:38.491126', '2024-07-22 10:11:38.491126')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('あうめいがらこの頃配慮。', 'よういきいろ馬鹿馬鹿しい。ししょく独裁合う。大仏きひんそんざい。', 30, 24, '2024-07-22 10:11:38.494674', '2024-07-22 10:11:38.494674')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '25hattie_quigley@mayert.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '25hattie_quigley@mayert.example', '$2a$04$qxmXQXEblqfTwlEwSp0UU.h6zMvdi9QqaS8eVBvId6LbGRiSMXMwu', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.498999', NULL, NULL, '佐藤 愛子', NULL, NULL, '25hattie_quigley@mayert.example', NULL, '2024-07-22 10:11:38.500751', '2024-07-22 10:11:38.500751')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('じぎするうえるきもち平安。', '急騰検査かたみち。だいどころたてかんしん。どうけつせいじょうフランス人。', 30, 25, '2024-07-22 10:11:38.503577', '2024-07-22 10:11:38.503577')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '26graham_luettgen@ruecker.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '26graham_luettgen@ruecker.test', '$2a$04$f/cwhYP4zmwQM9RbOri71.4oI.yBLghwfMXVt4Jflq2WH1d808axi', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.508087', NULL, NULL, '吉田 悠真', NULL, NULL, '26graham_luettgen@ruecker.test', NULL, '2024-07-22 10:11:38.510389', '2024-07-22 10:11:38.510389')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('悲しみ右利きちらかすかっこう。', '撃つ凝固量。助手黒板けいかん。血液話零す。', 20, 26, '2024-07-22 10:11:38.513485', '2024-07-22 10:11:38.513485')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '27adan.batz@zieme.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '27adan.batz@zieme.test', '$2a$04$mZIeYdTE8LQZlfaB1hn.G.EYag8mghs3GxxuMC7qPPPG9LIG1zFou', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.517745', NULL, NULL, '松田 颯', NULL, NULL, '27adan.batz@zieme.test', NULL, '2024-07-22 10:11:38.519553', '2024-07-22 10:11:38.519553')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('下さいかいがいようおかね。', 'まぎらす書き方廉価。さくにゅう禍根学者。せんたくする一文字復旧。', 20, 27, '2024-07-22 10:11:38.522247', '2024-07-22 10:11:38.522247')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '28ricki.west@kovacek.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '28ricki.west@kovacek.test', '$2a$04$3ZMZbGVmZzlvULNj0gyCP.tuPu/ZAKfwMCVoHC6DxmbUDjqEjrH6m', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.526988', NULL, NULL, '武田 美咲', NULL, NULL, '28ricki.west@kovacek.test', NULL, '2024-07-22 10:11:38.529170', '2024-07-22 10:11:38.529170')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('胃切迫きげんご品詞。', '復旧えきびょう奴ら。しょうりゃく号そだてる。牛乳縛る済ます。', 20, 28, '2024-07-22 10:11:38.532296', '2024-07-22 10:11:38.532296')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '29filiberto.stanton@nader-schroeder.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '29filiberto.stanton@nader-schroeder.test', '$2a$04$ChUnsWDlr.uOTQEOoomF8O8ZgpWKE3EFVoTKRRJ5mQti2ebwxmg5i', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.536322', NULL, NULL, '太田 未来', NULL, NULL, '29filiberto.stanton@nader-schroeder.test', NULL, '2024-07-22 10:11:38.538082', '2024-07-22 10:11:38.538082')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('まほうつかいよぼうかいたく配慮。', 'いっさくじつ金じきしょうそう。しょうゆおとといきょうかい。一文字はんそう勇気。', 20, 29, '2024-07-22 10:11:38.541336', '2024-07-22 10:11:38.541336')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '30odilia@roob.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '30odilia@roob.example', '$2a$04$N1xrH8Mt.6mj8Frmkaryze5A6RPS1wi8OUueOZml/VPHC6yDn9O9a', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.545905', NULL, NULL, '藤田 優斗', NULL, NULL, '30odilia@roob.example', NULL, '2024-07-22 10:11:38.547810', '2024-07-22 10:11:38.547810')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('はじめて味噌魅力騎兵。', 'つうやく閉じるきゅうりょう。せっぷく黙る原油。勇気つまる希望する。', 20, 30, '2024-07-22 10:11:38.550649', '2024-07-22 10:11:38.550649')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '31porter.macgyver@lubowitz.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '31porter.macgyver@lubowitz.example', '$2a$04$fqnXsNgyS6QYhMEydWn.hO.FvgspPnKc5Eys2v66ruyBdfFIza1ZO', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.554687', NULL, NULL, '加藤 茜', NULL, NULL, '31porter.macgyver@lubowitz.example', NULL, '2024-07-22 10:11:38.556510', '2024-07-22 10:11:38.556510')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('いつ頃馬鹿馬鹿しい合うちゅうもんする。', '交錯上手かおつき。ほきょうどう汚す。そんざいあしくび金星。', 20, 31, '2024-07-22 10:11:38.559811', '2024-07-22 10:11:38.559811')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '32wesley@gislason.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '32wesley@gislason.test', '$2a$04$yiWKhp9xlHkzT/exroUiiONGmK70eMndIIiOa3qE2yl3KQmZF9hMu', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.564398', NULL, NULL, '小島 諒', NULL, NULL, '32wesley@gislason.test', NULL, '2024-07-22 10:11:38.566174', '2024-07-22 10:11:38.566174')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('指紋桜色徳川縛る。', 'みつそんざいかんじる。太る抑制超〜。悲しみ丼貫く。', 20, 32, '2024-07-22 10:11:38.569006', '2024-07-22 10:11:38.569006')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '33nicholas_bauch@bahringer.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '33nicholas_bauch@bahringer.example', '$2a$04$eOiNXzAnxgFy6oq7iE.QfuwvY9ymz9dCHP0yZZxN3alHGoLcaQ50m', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.573069', NULL, NULL, '上田 直樹', NULL, NULL, '33nicholas_bauch@bahringer.example', NULL, '2024-07-22 10:11:38.575345', '2024-07-22 10:11:38.575345')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('独裁ごうけんむくきょうふ。', 'ほんらいおとといさいばん。閉めるちきゅう恨み。ちがい長唄まほうつかい。', 20, 33, '2024-07-22 10:11:38.578615', '2024-07-22 10:11:38.578615')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/articles" for 127.0.0.1 at 2024-07-22 10:11:38 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (25, 24, 23, 22, 21, 20, 19, 18, 17, 16)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (11.13ms)
+Completed 200 OK in 42ms (Views: 30.7ms | ActiveRecord: 1.3ms | Allocations: 20997)
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '34ligia@rolfson.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '34ligia@rolfson.example', '$2a$04$IoVibLZZjzSkeVLWFCgQI.fjvgo1dZx1rczFxv/PfmGetuSYvnnha', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.663326', NULL, NULL, '渡部 颯', NULL, NULL, '34ligia@rolfson.example', NULL, '2024-07-22 10:11:38.665259', '2024-07-22 10:11:38.665259')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('当て字碁ゆるむひかくする。', '擬装ほとりあえず。米国暴力たまご。色々こわす無駄。', 30, 34, '2024-07-22 10:11:38.668943', '2024-07-22 10:11:38.668943')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '35francisco@brakus.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '35francisco@brakus.test', '$2a$04$4IC7EOL7ty/73tZTQwvojObWzwneFo9z2m5/pSrDn83scyriHN49S', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.672984', NULL, NULL, '谷口 彩', NULL, NULL, '35francisco@brakus.test', NULL, '2024-07-22 10:11:38.695600', '2024-07-22 10:11:38.695600')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('徳川みなもと復旧こうおつ。', '同僚丼めいし。壊す米兵おととい。犠牲出版ぐん。', 30, 35, '2024-07-22 10:11:38.699792', '2024-07-22 10:11:38.699792')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '36colby_white@grady.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '36colby_white@grady.test', '$2a$04$PjEzE0UJEKyPPDyFIBv04.bBRSRFN2CJBMFpzdnub2loAmNl5pWsq', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.705327', NULL, NULL, '野村 優菜', NULL, NULL, '36colby_white@grady.test', NULL, '2024-07-22 10:11:38.707654', '2024-07-22 10:11:38.707654')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('やさしい下着いっさくじつ魅力。', 'のきつぎつぎけいじばん。割り箸ぶっきょう切迫。りゅうこうごきょうはんしゃだいどころ。', 30, 36, '2024-07-22 10:11:38.711867', '2024-07-22 10:11:38.711867')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '37cecil@kertzmann-koss.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '37cecil@kertzmann-koss.test', '$2a$04$rvJdvk/FYiRx.uMEkGw6R.ImBNlzcMzqha55G3gRi//nb.TAxM5oK', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.717180', NULL, NULL, '原田 愛', NULL, NULL, '37cecil@kertzmann-koss.test', NULL, '2024-07-22 10:11:38.719731', '2024-07-22 10:11:38.719731')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('つぎつぎ馬じきしょうそうりゅうこうご。', '奉仕色盲ひきざん。とうき救急車きょうふ。俵きょうどう壮年。', 30, 37, '2024-07-22 10:11:38.723193', '2024-07-22 10:11:38.723193')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '38rubi@mcclure.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '38rubi@mcclure.test', '$2a$04$2yLugLrg3B601gc3lTKr9OiqbBkTdxzndI3oWxvWu72YOIA.LKYqi', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.728913', NULL, NULL, '平野 優花', NULL, NULL, '38rubi@mcclure.test', NULL, '2024-07-22 10:11:38.731429', '2024-07-22 10:11:38.731429')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('底まぎらす検査もうす。', '店舗じゅうらい推奨。はりい桜色きんく。かつ金縛り安泰。', 30, 38, '2024-07-22 10:11:38.735172', '2024-07-22 10:11:38.735172')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '39ronda_murphy@goyette.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '39ronda_murphy@goyette.test', '$2a$04$VA4u/vYq3xZW8kA0ooa...oHB8it6X49tNsMPWoM4sAZNSG4fhQ3W', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.740317', NULL, NULL, '青木 樹', NULL, NULL, '39ronda_murphy@goyette.test', NULL, '2024-07-22 10:11:38.742903', '2024-07-22 10:11:38.742903')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('開閉ぶそう総括希望する。', 'つうやく配慮こうつう。床むぜい全日本。〜亭たまご一文字。', 30, 39, '2024-07-22 10:11:38.746861', '2024-07-22 10:11:38.746861')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '40valery@collier.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '40valery@collier.test', '$2a$04$UCsueJs7YJqqCO7Yk3Fc..Hw5j6kyZaQz16WW9njyySNaIs5ZsnVG', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.751878', NULL, NULL, '藤田 茜', NULL, NULL, '40valery@collier.test', NULL, '2024-07-22 10:11:38.753901', '2024-07-22 10:11:38.753901')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('おりめきひん黙る鈍器。', '出かける金疾走。難しいぼきん喜劇。難しい提案する全日本。', 30, 40, '2024-07-22 10:11:38.757137', '2024-07-22 10:11:38.757137')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '41eugene@becker.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '41eugene@becker.test', '$2a$04$LR2kudKxU/nWU8/ucarqkOOAdFwZ0bEBgGkpqow0KNswXb70OvvMm', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.762527', NULL, NULL, '河野 美月', NULL, NULL, '41eugene@becker.test', NULL, '2024-07-22 10:11:38.764870', '2024-07-22 10:11:38.764870')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('たついちだい妥協するいつ頃。', 'おどろくしゃくやせいぞう。ハチのすうえる哀れむ。杏いうせっぷく。', 30, 41, '2024-07-22 10:11:38.768258', '2024-07-22 10:11:38.768258')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '42mertie.hermiston@carter-damore.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '42mertie.hermiston@carter-damore.test', '$2a$04$jUzWOmpqmwpX2kCoSkwajONoB2KtQ6VKi9FwNv.bEnHJkDdItYl/e', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.772521', NULL, NULL, '菅原 響', NULL, NULL, '42mertie.hermiston@carter-damore.test', NULL, '2024-07-22 10:11:38.774349', '2024-07-22 10:11:38.774349')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('難しい右翼問題床。', '哀れむうえるにんい。ほうげん鈍器馬鹿馬鹿しい。抑制奉仕えきびょう。', 30, 42, '2024-07-22 10:11:38.777602', '2024-07-22 10:11:38.777602')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '43leida@witting-rowe.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '43leida@witting-rowe.test', '$2a$04$YOVAN51.dyPd6QiPCe/m2.JiKzeQT1iSR9a3fSzeOK1nIIDDPFRra', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.781897', NULL, NULL, '清水 諒', NULL, NULL, '43leida@witting-rowe.test', NULL, '2024-07-22 10:11:38.783693', '2024-07-22 10:11:38.783693')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('ほんらいあらす境まつ。', '半額宜しく号。むこうのき当て字。廉価まつお盆。', 30, 43, '2024-07-22 10:11:38.786389', '2024-07-22 10:11:38.786389')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '44chad@rodriguez.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '44chad@rodriguez.test', '$2a$04$1pQF6F7NA/U58V18XQJms.7eXdGaS/cXAT5VydsFaA7/WTsKHcy0K', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.790584', NULL, NULL, '野村 茜', NULL, NULL, '44chad@rodriguez.test', NULL, '2024-07-22 10:11:38.792808', '2024-07-22 10:11:38.792808')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('推奨軒くつじょく報じる。', 'そだてる恨みお盆。特殊かんどうするはちまき。じょうじゅん下さい疾走。', 30, 44, '2024-07-22 10:11:38.796055', '2024-07-22 10:11:38.796055')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '45adolfo_schulist@roberts.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '45adolfo_schulist@roberts.example', '$2a$04$59WyKOb54PjMWuCJZnU12OFKonU488ffsJILwmh9Ybssp6upDsm5a', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.800061', NULL, NULL, '長谷川 愛子', NULL, NULL, '45adolfo_schulist@roberts.example', NULL, '2024-07-22 10:11:38.801851', '2024-07-22 10:11:38.801851')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('誘惑金星つうやく太る。', '好きかおつきあおい。しゃくや奉仕安泰。評価都合ひきさく。', 30, 45, '2024-07-22 10:11:38.804805', '2024-07-22 10:11:38.804805')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '46charlene@crona.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '46charlene@crona.example', '$2a$04$1MFCNhsJ1r1Fh4dC06HAdufjqXZrZxIbCX7xFwPSvx/j67A7IZ9Du', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.809096', NULL, NULL, '宮崎 海斗', NULL, NULL, '46charlene@crona.example', NULL, '2024-07-22 10:11:38.811498', '2024-07-22 10:11:38.811498')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('礎おんとうはちのす長唄。', '十台あびる待合。ちがい新婚旅行復旧。まもる暇いちだい。', 30, 46, '2024-07-22 10:11:38.814660', '2024-07-22 10:11:38.814660')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '47grayce.ondricka@schultz.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '47grayce.ondricka@schultz.example', '$2a$04$tp4tvj/GwfTXp184yO42hOqgJBwKYMEvIIoc2/AfpXAXk7yMSkDB2', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.818632', NULL, NULL, '岡田 未来', NULL, NULL, '47grayce.ondricka@schultz.example', NULL, '2024-07-22 10:11:38.820348', '2024-07-22 10:11:38.820348')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('たれるはんそう哀れむ巡回。', 'かくじっけん急騰ぞくご。退く助手床。はなじじぞうちゅうもんする。', 30, 47, '2024-07-22 10:11:38.823122', '2024-07-22 10:11:38.823122')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '48maud_oconnell@windler-abbott.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '48maud_oconnell@windler-abbott.example', '$2a$04$Qs.9dkAzURd85UGOC.xrLecBBL.eCWuV5nZYuSyz6Q34L1L89LTvm', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.827747', NULL, NULL, '千葉 悠斗', NULL, NULL, '48maud_oconnell@windler-abbott.example', NULL, '2024-07-22 10:11:38.829763', '2024-07-22 10:11:38.829763')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('日没推奨浅い窓。', 'まもるあびる廉価。迷路きゅうりょう液体。閉める遺失合う。', 30, 48, '2024-07-22 10:11:38.832708', '2024-07-22 10:11:38.832708')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '49easter_reynolds@wolff.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '49easter_reynolds@wolff.example', '$2a$04$Yyw..RM8dgXTc9HjzFXh0uM89Ix2e3GZIFTErmQmEVVU6sXTaSfrG', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.836514', NULL, NULL, '千葉 大樹', NULL, NULL, '49easter_reynolds@wolff.example', NULL, '2024-07-22 10:11:38.838160', '2024-07-22 10:11:38.838160')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('ほんらいつばさ礎廉価。', 'きょうはんしゃかつかい。せっぷくフランス語かたみち。擬装手作り交錯。', 30, 49, '2024-07-22 10:11:38.841281', '2024-07-22 10:11:38.841281')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '50neda_leffler@kautzer.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '50neda_leffler@kautzer.test', '$2a$04$BJ3sSfgCJhX57SPfo2xnYOcuJjRR4JEGTqMtG6G36xiMQ49n1DRYy', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.845828', NULL, NULL, '増田 誠', NULL, NULL, '50neda_leffler@kautzer.test', NULL, '2024-07-22 10:11:38.847762', '2024-07-22 10:11:38.847762')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('救急車既に哀れむ難しい。', 'あっとうするたいりくずいぶん。くつじょくやさしい話。つうやくちょさくけん浮世絵。', 30, 50, '2024-07-22 10:11:38.850552', '2024-07-22 10:11:38.850552')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '51rey@greenfelder.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '51rey@greenfelder.test', '$2a$04$l7ql/wwYd3CW1bBScEcc.uqpjd9UFK/YdNx2YsTLtJ4bc/4HxAj.W', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.854618', NULL, NULL, '渡辺 琴音', NULL, NULL, '51rey@greenfelder.test', NULL, '2024-07-22 10:11:38.856298', '2024-07-22 10:11:38.856298')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('きんく黒板みつ果樹。', '旧姓かい羊毛。色盲賢明ふさい。ひきざん推奨みなと。', 30, 51, '2024-07-22 10:11:38.859649', '2024-07-22 10:11:38.859649')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '52daphine@ankunding.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '52daphine@ankunding.example', '$2a$04$k2suJFb7QMKvyHuon9PVd.voIyw/Ak32JIdwVOf7uWOayXXfyqNeS', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.864231', NULL, NULL, '増田 一輝', NULL, NULL, '52daphine@ankunding.example', NULL, '2024-07-22 10:11:38.866090', '2024-07-22 10:11:38.866090')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('新婚旅行割り箸きょうどうあらそう。', '学院継承きょうき。あくれいぞくご核実験。不健康しずむりょうど。', 30, 52, '2024-07-22 10:11:38.868843', '2024-07-22 10:11:38.868843')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '53nicholle_stanton@kassulke.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '53nicholle_stanton@kassulke.example', '$2a$04$/Oci/0dF341/.WFtGs.zgOzXZv7MePjATF0mFNNmVkbVx6eAViHgC', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.872668', NULL, NULL, '山口 仁', NULL, NULL, '53nicholle_stanton@kassulke.example', NULL, '2024-07-22 10:11:38.874326', '2024-07-22 10:11:38.874326')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('自立春休みさいほう推奨。', '勇気急騰双。巡回雇用悲しみ。いつ頃こうぞく機嫌。', 30, 53, '2024-07-22 10:11:38.877532', '2024-07-22 10:11:38.877532')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '54evelina_emard@rohan.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '54evelina_emard@rohan.test', '$2a$04$LKEARKBtPLq3Bn23/CRZJ.okoNNAd8Tq85bVNB5W7zD5Y6u73hRk6', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.881792', NULL, NULL, '森田 愛子', NULL, NULL, '54evelina_emard@rohan.test', NULL, '2024-07-22 10:11:38.883583', '2024-07-22 10:11:38.883583')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('右利きだくりゅうしょうりゃく哀れむ。', 'おととい独裁平安。はなじ新婚旅行まもる。金星不健康重い。', 30, 54, '2024-07-22 10:11:38.886478', '2024-07-22 10:11:38.886478')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '55ty.kreiger@wisoky-lind.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '55ty.kreiger@wisoky-lind.example', '$2a$04$05lqz2gOozX6FKmWeerAQeWhxE9U0RFNQ7hI5mXbFNdVBxTzgso0K', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.890460', NULL, NULL, '西村 琴音', NULL, NULL, '55ty.kreiger@wisoky-lind.example', NULL, '2024-07-22 10:11:38.892602', '2024-07-22 10:11:38.892602')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('あびる山葵長唄上手。', 'かちゅう終点ほうしゅう。問題終点色々。歯を磨くこうつう没落。', 30, 55, '2024-07-22 10:11:38.895579', '2024-07-22 10:11:38.895579')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '56alexis@tromp-harvey.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '56alexis@tromp-harvey.test', '$2a$04$K8IqmjxEFkZbfVnxgcj0weCau7Sypmhhq0BC7LTRlDn7Vvo.r45sa', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.899673', NULL, NULL, '伊藤 優', NULL, NULL, '56alexis@tromp-harvey.test', NULL, '2024-07-22 10:11:38.901316', '2024-07-22 10:11:38.901316')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('たて華やか馬ことばつき。', 'とめるちえん頂く。底継承減俸。不可欠待合がんばる。', 30, 56, '2024-07-22 10:11:38.904038', '2024-07-22 10:11:38.904038')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '57tabetha@schamberger.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '57tabetha@schamberger.example', '$2a$04$kmBkCrUo8r2yiACo7.Pgmevh0NTNvyrwfKxAtdDrQIXUcqETnoMZW', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.907971', NULL, NULL, '遠藤 美桜', NULL, NULL, '57tabetha@schamberger.example', NULL, '2024-07-22 10:11:38.910118', '2024-07-22 10:11:38.910118')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('好き切迫双ちかく。', '先ずひかくするほうげん。機嫌太る地面。こうせい芽あつい。', 30, 57, '2024-07-22 10:11:38.913387', '2024-07-22 10:11:38.913387')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '58jeremy@doyle.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '58jeremy@doyle.test', '$2a$04$o7gBokdZ1.IuCgHlH6Cogun4wKHhyVNqFLPk1cHYGTjauK.76tlgu', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.917264', NULL, NULL, '岩崎 大輝', NULL, NULL, '58jeremy@doyle.test', NULL, '2024-07-22 10:11:38.918961', '2024-07-22 10:11:38.918961')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('鈍器日没縛る機嫌。', 'はんだんするかたみちほうせき。評価とりあえず味噌。きげんごしきもうねばり。', 30, 58, '2024-07-22 10:11:38.921673', '2024-07-22 10:11:38.921673')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '59isaiah@mckenzie.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '59isaiah@mckenzie.example', '$2a$04$m7UadKklNMVAvWNpa35vWuTLdX63UvIrj0/zVCI/0aiDHKHyLWgym', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.926004', NULL, NULL, '斎藤 悠太', NULL, NULL, '59isaiah@mckenzie.example', NULL, '2024-07-22 10:11:38.928327', '2024-07-22 10:11:38.928327')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('ねんじゅうふそくじょうじゅんおととい。', 'この頃ごふく投資。新婚旅行のきゆるむ。さくにゅうきょうどういう。', 20, 59, '2024-07-22 10:11:38.931356', '2024-07-22 10:11:38.931356')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '60vania@lynch.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '60vania@lynch.example', '$2a$04$PMJDnwP5uiors3YtgaZyuOBE.mXn6sX8GOljlPdhi1vjARncm1LKq', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.935402', NULL, NULL, '小川 蓮', NULL, NULL, '60vania@lynch.example', NULL, '2024-07-22 10:11:38.937321', '2024-07-22 10:11:38.937321')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('馬鹿馬鹿しいフランス人じゅうらいなおさら。', 'もうすみつないしょばなし。老齢くつじょく形。しえんするけいかん疾走。', 20, 60, '2024-07-22 10:11:38.940162', '2024-07-22 10:11:38.940162')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '61wonda@beer.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '61wonda@beer.example', '$2a$04$IDB4XVLItOE.9XHejnu3a.QPtQxEbhixRHv..zqJJj.1S/DQ4UB1O', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.944900', NULL, NULL, '三浦 さくら', NULL, NULL, '61wonda@beer.example', NULL, '2024-07-22 10:11:38.946945', '2024-07-22 10:11:38.946945')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('きゅうりょう既にお盆殻。', '人口推奨面積。せんじょうざい九日体重。むらさきいろ新婚旅行下さい。', 20, 61, '2024-07-22 10:11:38.949884', '2024-07-22 10:11:38.949884')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '62chauncey.mayer@morissette.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '62chauncey.mayer@morissette.example', '$2a$04$LMxrk3NfFoTEs6rRsHwAOuKihwHqXMakDl20Y3mzZ3ONLHLxNIpYq', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.953867', NULL, NULL, '丸山 杏', NULL, NULL, '62chauncey.mayer@morissette.example', NULL, '2024-07-22 10:11:38.955654', '2024-07-22 10:11:38.955654')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('飽くまでも汚す浮世絵屈む。', 'むこう太るこくふくする。面積新婚旅行たまご。床日欧減俸。', 20, 62, '2024-07-22 10:11:38.958780', '2024-07-22 10:11:38.958780')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '63lacy@dibbert.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '63lacy@dibbert.test', '$2a$04$6GNldZUALwGTz9rN97nBD.X9nXt9ll9eB4aug9YRPlz18kDrFikwG', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.963540', NULL, NULL, '横山 さくら', NULL, NULL, '63lacy@dibbert.test', NULL, '2024-07-22 10:11:38.965444', '2024-07-22 10:11:38.965444')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('原油迷路ほにゅうびんはじめて。', 'はちのす委員大仏。評価右翼きげんご。しばふ半額〜系。', 20, 63, '2024-07-22 10:11:38.968073', '2024-07-22 10:11:38.968073')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '64delfina.mertz@cronin-rohan.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '64delfina.mertz@cronin-rohan.example', '$2a$04$g6xK7hbEmELw7fTAv2ADIeQJhsHnfY0bHoXraPgnAjTKp8D/hYDIS', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.971913', NULL, NULL, '中川 愛子', NULL, NULL, '64delfina.mertz@cronin-rohan.example', NULL, '2024-07-22 10:11:38.973874', '2024-07-22 10:11:38.973874')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('失う活用双九日。', 'さいばん金量。みつまつだいどころ。店うえる急騰。', 20, 64, '2024-07-22 10:11:38.977574', '2024-07-22 10:11:38.977574')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '65edwin@block.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '65edwin@block.example', '$2a$04$DNU4h0IXgPvurO3uCflDe.S.zYQLO6.3fV2H0ZVmung9yuZzbEp0m', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.981887', NULL, NULL, '石田 優奈', NULL, NULL, '65edwin@block.example', NULL, '2024-07-22 10:11:38.983730', '2024-07-22 10:11:38.983730')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('きゅうりょう独裁同僚狂う。', '地面あれる合う。かんどうするみつ普及。日欧けしき液体。', 20, 65, '2024-07-22 10:11:38.986534', '2024-07-22 10:11:38.986534')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '66hortense@mante-leffler.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '66hortense@mante-leffler.test', '$2a$04$emrvtxy9oQxTfr/xT6u9I.adtL8YBQ3AvtPBgUlfDyfkx8F2.teF.', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:38.990507', NULL, NULL, '石川 恵', NULL, NULL, '66hortense@mante-leffler.test', NULL, '2024-07-22 10:11:38.992638', '2024-07-22 10:11:38.992638')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('きいろ賢明あおいかいたく。', 'なんべい米国のき。割り箸液体しずむ。魅力遮断こうつう。', 20, 66, '2024-07-22 10:11:38.995682', '2024-07-22 10:11:38.995682')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/articles?page=2" for 127.0.0.1 at 2024-07-22 10:11:38 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mArticle Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 10[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (48, 47, 46, 45, 44, 43, 42, 41, 40, 39)[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (8.62ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 1.1ms | Allocations: 14796)
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '67emmitt@zemlak-schultz.example' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '67emmitt@zemlak-schultz.example', '$2a$04$lcAxU77NFiAhtT1F437TKeSQ9N.sKF5igUvdV5ngF6CG3PeckQY/6', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:39.026165', NULL, NULL, '佐野 美優', NULL, NULL, '67emmitt@zemlak-schultz.example', NULL, '2024-07-22 10:11:39.028468', '2024-07-22 10:11:39.028468')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('じょうきかいじゅうかんどうするおととい。', '漂う超〜ふそく。かい牛乳うえる。ふん近視漂う。', 30, 67, '2024-07-22 10:11:39.031524', '2024-07-22 10:11:39.031524')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/articles/67" for 127.0.0.1 at 2024-07-22 10:11:39 +0000
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 AND `articles`.`id` = 67 LIMIT 1[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 67 LIMIT 1[0m
+[active_model_serializers] Rendered ArticleSerializer with ActiveModelSerializers::Adapter::Attributes (5.82ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.4ms | Allocations: 2248)
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '68andreas_hirthe@block.test' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', '68andreas_hirthe@block.test', '$2a$04$1JSJCrZgnJtO4mWgNIQAauBmlwurBIDsdlZAUfhC9mcc9E.SA3EGy', NULL, NULL, FALSE, NULL, NULL, '2024-07-22 10:11:39.052866', NULL, NULL, '和田 陽斗', NULL, NULL, '68andreas_hirthe@block.test', NULL, '2024-07-22 10:11:39.054748', '2024-07-22 10:11:39.054748')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `content`, `status`, `user_id`, `created_at`, `updated_at`) VALUES ('堀川まもるさいばん店。', 'シアトルし逆たいこうする。へいがいせんたくするかいぞく。擬装十台まぎらす。', 20, 68, '2024-07-22 10:11:39.058306', '2024-07-22 10:11:39.058306')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/articles/68" for 127.0.0.1 at 2024-07-22 10:11:39 +0000
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 AND `articles`.`id` = 68 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 483)
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/api/v1/articles/10000000000" for 127.0.0.1 at 2024-07-22 10:11:39 +0000
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"10000000000"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 AND `articles`.`id` = 10000000000 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 527)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
