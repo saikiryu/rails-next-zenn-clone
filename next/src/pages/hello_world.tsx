@@ -1,18 +1,18 @@
-import type { NextPage } from "next";
-import SimpleButton from "@/components/SimpleButton";
+import type { NextPage } from 'next'
+import SimpleButton from '@/components/SimpleButton'
 
 const HelloWorld: NextPage = () => {
   const handleOnClick = () => {
-    console.log("Clicked from hello_world");
-  };
+    console.log('Clicked from hello_world')
+  }
 
   return (
     <>
       <h1>Title</h1>
       <p>content</p>
-      <SimpleButton text={"click"} onClick={handleOnClick} />
+      <SimpleButton text={'click'} onClick={handleOnClick} />
     </>
-  );
-};
+  )
+}
 
-export default HelloWorld;
+export default HelloWorld
