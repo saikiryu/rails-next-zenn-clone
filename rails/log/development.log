@@ -3681,3 +3681,259 @@ Processing by Api::V1::ArticlesController#index as HTML
 Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 2.1ms | Allocations: 14328)
 
 
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 07:12:51 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (144.38ms)
+Completed 200 OK in 196ms (Views: 189.3ms | ActiveRecord: 2.3ms | Allocations: 14328)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 07:17:01 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (42.55ms)
+Completed 200 OK in 83ms (Views: 70.7ms | ActiveRecord: 1.9ms | Allocations: 14328)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 11:18:43 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (70.85ms)
+Completed 200 OK in 186ms (Views: 163.1ms | ActiveRecord: 7.4ms | Allocations: 14442)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 11:19:25 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (59.49ms)
+Completed 200 OK in 108ms (Views: 102.4ms | ActiveRecord: 1.8ms | Allocations: 14328)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 11:22:12 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (81.1ms)
+Completed 200 OK in 217ms (Views: 186.2ms | ActiveRecord: 2.5ms | Allocations: 14328)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 11:32:18 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (4.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (86.48ms)
+Completed 200 OK in 210ms (Views: 155.3ms | ActiveRecord: 9.3ms | Allocations: 14442)
+
+
+Started POST "/api/v1/auth/sign_in" for 192.168.65.1 at 2024-07-31 11:32:24 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8bee624b0>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8bee624b0>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'test1@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8bee624b0>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8bee624b0>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (4.2ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"BCXjYhQESAdUserWGXeNgg\":{\"token\":\"$2a$10$8kWR/FT4v4bFc50AOXywmeYHZLIDT1Pf9Xe2JE6Y2mVA.bdYp3/6W\",\"expiry\":1723531175},\"G0GRpIemG2-WKD4sAOLyfQ\":{\"token\":\"$2a$10$upi8C4fEZxnqk5DVAU7xCuJR8m.BM3s89zpY1O6wF8cB01rYFM99S\",\"expiry\":1723532083},\"N2wjHKvGbs-niLjs_pPvdA\":{\"token\":\"$2a$10$prkmgbOkqeZRwprVaToGqOxOrd0jB8DlX6sElaO2MJiLULTXMPPnq\",\"expiry\":1723556939},\"cs9cS_2n3V7hSzaDoAIEtw\":{\"token\":\"$2a$10$6j7vf9wDVvdiZcgsehrMUONeHuJEKssjCj0kl2hAtk40Rf8eSCVmq\",\"expiry\":1723556961},\"UjYESrkFVZ30qFVCXe8EaQ\":{\"token\":\"$2a$10$U4b/td0w.I8AynuEe74cieCuuVYvBrMI5FkfhCnsfF4sW0VZ0GMJK\",\"expiry\":1723572610},\"7Y-RodR9pG2MzU-B4Ozj3Q\":{\"token\":\"$2a$10$n.EAS4WuMHS051iHNHXobe.K/EzFXk2sR8pxwOb1aS/RzC3KaqJsS\",\"expiry\":1723572756},\"TxsA-TYNu1dQh4Yw8qtBLQ\":{\"token\":\"$2a$10$jAytLTy1cAjyOvtf.B1f0.d0q06QhpuPDb4XZ5eZ.Q3Um8Nrl4fQC\",\"expiry\":1723572964},\"rvrW5j67iew09bw8IxU6Rw\":{\"token\":\"$2a$10$N1b/mkc1SfoevzEaBwGIxuJcqhaZUIxlGEwGRZEuk6SlFa/QRNVza\",\"expiry\":1723574362},\"e7O6ToxkVJ4lejMiQmyiCQ\":{\"token\":\"$2a$10$M.kHlOtDlTZuPMFzZOT5VO0XpcgWGeyrZHFph5Xp3UnMSLC9LsWOy\",\"expiry\":1723618720},\"bd9a8LFYbgA8fBnUJQFa5A\":{\"token\":\"$2a$10$81aWXLrp.VFMrZAR.LS7u.qhwI8R1aycDp2gpaZwHmq6xoyNdvCg.\",\"expiry\":1723635145}}', `users`.`updated_at` = '2024-07-31 11:32:25.262198' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 461ms (Views: 1.2ms | ActiveRecord: 15.7ms | Allocations: 7788)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-31 11:32:25 +0000
+Processing by Api::V1::Current::UsersController#show as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 11:32:25 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered CurrentUserSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+Completed 200 OK in 120ms (Views: 7.9ms | ActiveRecord: 1.3ms | Allocations: 7242)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (93.07ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 219ms (Views: 186.8ms | ActiveRecord: 11.7ms | Allocations: 17984)
+
+
+Started GET "/api/v1/current/articles" for 192.168.65.1 at 2024-07-31 11:32:30 +0000
+Processing by Api::V1::Current::ArticlesController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 AND `articles`.`status` != 10 ORDER BY `articles`.`created_at` DESC[0m
+  ↳ app/controllers/api/v1/current/articles_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (57.31ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 263ms (Views: 81.0ms | ActiveRecord: 5.2ms | Allocations: 11885)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 11:33:03 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (52.29ms)
+Completed 200 OK in 103ms (Views: 96.3ms | ActiveRecord: 2.0ms | Allocations: 14423)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 11:33:16 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (38.55ms)
+Completed 200 OK in 92ms (Views: 85.7ms | ActiveRecord: 2.2ms | Allocations: 14328)
+
+
+Started POST "/api/v1/auth/sign_in" for 192.168.65.1 at 2024-07-31 11:33:38 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8bea6d120>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8bea6d120>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'test1@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8bea6d120>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8bea6d120>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (2.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"G0GRpIemG2-WKD4sAOLyfQ\":{\"token\":\"$2a$10$upi8C4fEZxnqk5DVAU7xCuJR8m.BM3s89zpY1O6wF8cB01rYFM99S\",\"expiry\":1723532083},\"N2wjHKvGbs-niLjs_pPvdA\":{\"token\":\"$2a$10$prkmgbOkqeZRwprVaToGqOxOrd0jB8DlX6sElaO2MJiLULTXMPPnq\",\"expiry\":1723556939},\"cs9cS_2n3V7hSzaDoAIEtw\":{\"token\":\"$2a$10$6j7vf9wDVvdiZcgsehrMUONeHuJEKssjCj0kl2hAtk40Rf8eSCVmq\",\"expiry\":1723556961},\"UjYESrkFVZ30qFVCXe8EaQ\":{\"token\":\"$2a$10$U4b/td0w.I8AynuEe74cieCuuVYvBrMI5FkfhCnsfF4sW0VZ0GMJK\",\"expiry\":1723572610},\"7Y-RodR9pG2MzU-B4Ozj3Q\":{\"token\":\"$2a$10$n.EAS4WuMHS051iHNHXobe.K/EzFXk2sR8pxwOb1aS/RzC3KaqJsS\",\"expiry\":1723572756},\"TxsA-TYNu1dQh4Yw8qtBLQ\":{\"token\":\"$2a$10$jAytLTy1cAjyOvtf.B1f0.d0q06QhpuPDb4XZ5eZ.Q3Um8Nrl4fQC\",\"expiry\":1723572964},\"rvrW5j67iew09bw8IxU6Rw\":{\"token\":\"$2a$10$N1b/mkc1SfoevzEaBwGIxuJcqhaZUIxlGEwGRZEuk6SlFa/QRNVza\",\"expiry\":1723574362},\"e7O6ToxkVJ4lejMiQmyiCQ\":{\"token\":\"$2a$10$M.kHlOtDlTZuPMFzZOT5VO0XpcgWGeyrZHFph5Xp3UnMSLC9LsWOy\",\"expiry\":1723618720},\"bd9a8LFYbgA8fBnUJQFa5A\":{\"token\":\"$2a$10$81aWXLrp.VFMrZAR.LS7u.qhwI8R1aycDp2gpaZwHmq6xoyNdvCg.\",\"expiry\":1723635145},\"5N20xWWuP7FQdWZ_3VNJBg\":{\"token\":\"$2a$10$PoegGxqOTs9Hi7uHoy3tQOG3saovzQhWR//iB5LYrKLsvptE.YqTK\",\"expiry\":1723635218}}', `users`.`updated_at` = '2024-07-31 11:33:38.576220' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 437ms (Views: 1.1ms | ActiveRecord: 13.9ms | Allocations: 7922)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-31 11:33:38 +0000
+Processing by Api::V1::Current::UsersController#show as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 11:33:38 +0000
+[active_model_serializers] Rendered CurrentUserSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 200 OK in 102ms (Views: 2.1ms | ActiveRecord: 1.4ms | Allocations: 4722)
+
+
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (39.06ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 81ms (Views: 69.2ms | ActiveRecord: 4.6ms | Allocations: 16146)
+
+
+Started GET "/api/v1/current/articles" for 192.168.65.1 at 2024-07-31 11:33:42 +0000
+Processing by Api::V1::Current::ArticlesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 AND `articles`.`status` != 10 ORDER BY `articles`.`created_at` DESC[0m
+  ↳ app/controllers/api/v1/current/articles_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.56ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 46ms (Views: 33.0ms | ActiveRecord: 1.8ms | Allocations: 10494)
+
+
+Started GET "/api/v1/current/articles" for 192.168.65.1 at 2024-07-31 11:34:30 +0000
+Processing by Api::V1::Current::ArticlesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+  [1m[36mArticle Load (6.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 AND `articles`.`status` != 10 ORDER BY `articles`.`created_at` DESC[0m
+  ↳ app/controllers/api/v1/current/articles_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.41ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 52ms (Views: 33.8ms | ActiveRecord: 7.5ms | Allocations: 10488)
+
+
+Started GET "/api/v1/current/articles" for 192.168.65.1 at 2024-07-31 11:34:46 +0000
+Processing by Api::V1::Current::ArticlesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 AND `articles`.`status` != 10 ORDER BY `articles`.`created_at` DESC[0m
+  ↳ app/controllers/api/v1/current/articles_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.23ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 65ms (Views: 33.9ms | ActiveRecord: 3.9ms | Allocations: 10488)
+
+
+Started GET "/api/v1/current/articles" for 192.168.65.1 at 2024-07-31 11:34:50 +0000
+Processing by Api::V1::Current::ArticlesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 AND `articles`.`status` != 10 ORDER BY `articles`.`created_at` DESC[0m
+  ↳ app/controllers/api/v1/current/articles_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.59ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 47ms (Views: 38.6ms | ActiveRecord: 1.9ms | Allocations: 10488)
+
+
+Started GET "/api/v1/current/articles" for 192.168.65.1 at 2024-07-31 11:34:59 +0000
+Processing by Api::V1::Current::ArticlesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 AND `articles`.`status` != 10 ORDER BY `articles`.`created_at` DESC[0m
+  ↳ app/controllers/api/v1/current/articles_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.57ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 35ms (Views: 24.6ms | ActiveRecord: 2.4ms | Allocations: 10489)
+
+
+Started GET "/api/v1/current/articles" for 192.168.65.1 at 2024-07-31 11:35:55 +0000
+Processing by Api::V1::Current::ArticlesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 AND `articles`.`status` != 10 ORDER BY `articles`.`created_at` DESC[0m
+  ↳ app/controllers/api/v1/current/articles_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.72ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 36ms (Views: 25.5ms | ActiveRecord: 2.5ms | Allocations: 10487)
+
+
