@@ -3529,3 +3529,155 @@ Processing by Api::V1::ArticlesController#index as HTML
 Completed 200 OK in 30ms (Views: 23.9ms | ActiveRecord: 2.7ms | Allocations: 14328)
 
 
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-30 18:51:33 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (6.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (12.1ms)
+Completed 200 OK in 42ms (Views: 22.0ms | ActiveRecord: 9.9ms | Allocations: 14442)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 06:58:03 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (10.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (59.56ms)
+Completed 200 OK in 263ms (Views: 115.7ms | ActiveRecord: 22.4ms | Allocations: 14442)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 06:58:08 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (18.75ms)
+Completed 200 OK in 46ms (Views: 38.7ms | ActiveRecord: 2.5ms | Allocations: 14328)
+
+
+Started POST "/api/v1/auth/sign_in" for 192.168.65.1 at 2024-07-31 06:58:22 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be4f2fd8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be4f2fd8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'test1@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be4f2fd8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be4f2fd8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.89ms)
+Completed 401 Unauthorized in 320ms (Views: 4.4ms | ActiveRecord: 2.6ms | Allocations: 1793)
+
+
+Started POST "/api/v1/auth/sign_in" for 192.168.65.1 at 2024-07-31 06:58:24 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be4c8120>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be4c8120>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'test1@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be4c8120>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be4c8120>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 401 Unauthorized in 303ms (Views: 1.5ms | ActiveRecord: 0.7ms | Allocations: 1791)
+
+
+Started POST "/api/v1/auth/sign_in" for 192.168.65.1 at 2024-07-31 06:58:26 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be49d2b8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be49d2b8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'test1@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be49d2b8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be49d2b8>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 401 Unauthorized in 305ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1790)
+
+
+Started POST "/api/v1/auth/sign_in" for 192.168.65.1 at 2024-07-31 06:58:39 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be471e88>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be471e88>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY `email` = 'test1@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be471e88>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007fd8be471e88>, params: {"email"=>"test1@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.4ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Update (5.6ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"WJ-WGpd52WwWEPg0LLkUhA\":{\"token\":\"$2a$10$p2.ow2IclQwCC39T.0t3m.SlvTcDNDN0FKpHRZe1rAE1x13/5buyu\",\"expiry\":1722867781},\"BCXjYhQESAdUserWGXeNgg\":{\"token\":\"$2a$10$8kWR/FT4v4bFc50AOXywmeYHZLIDT1Pf9Xe2JE6Y2mVA.bdYp3/6W\",\"expiry\":1723531175},\"G0GRpIemG2-WKD4sAOLyfQ\":{\"token\":\"$2a$10$upi8C4fEZxnqk5DVAU7xCuJR8m.BM3s89zpY1O6wF8cB01rYFM99S\",\"expiry\":1723532083},\"N2wjHKvGbs-niLjs_pPvdA\":{\"token\":\"$2a$10$prkmgbOkqeZRwprVaToGqOxOrd0jB8DlX6sElaO2MJiLULTXMPPnq\",\"expiry\":1723556939},\"cs9cS_2n3V7hSzaDoAIEtw\":{\"token\":\"$2a$10$6j7vf9wDVvdiZcgsehrMUONeHuJEKssjCj0kl2hAtk40Rf8eSCVmq\",\"expiry\":1723556961},\"UjYESrkFVZ30qFVCXe8EaQ\":{\"token\":\"$2a$10$U4b/td0w.I8AynuEe74cieCuuVYvBrMI5FkfhCnsfF4sW0VZ0GMJK\",\"expiry\":1723572610},\"7Y-RodR9pG2MzU-B4Ozj3Q\":{\"token\":\"$2a$10$n.EAS4WuMHS051iHNHXobe.K/EzFXk2sR8pxwOb1aS/RzC3KaqJsS\",\"expiry\":1723572756},\"TxsA-TYNu1dQh4Yw8qtBLQ\":{\"token\":\"$2a$10$jAytLTy1cAjyOvtf.B1f0.d0q06QhpuPDb4XZ5eZ.Q3Um8Nrl4fQC\",\"expiry\":1723572964},\"rvrW5j67iew09bw8IxU6Rw\":{\"token\":\"$2a$10$N1b/mkc1SfoevzEaBwGIxuJcqhaZUIxlGEwGRZEuk6SlFa/QRNVza\",\"expiry\":1723574362},\"e7O6ToxkVJ4lejMiQmyiCQ\":{\"token\":\"$2a$10$M.kHlOtDlTZuPMFzZOT5VO0XpcgWGeyrZHFph5Xp3UnMSLC9LsWOy\",\"expiry\":1723618720}}', `users`.`updated_at` = '2024-07-31 06:58:40.217746' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 439ms (Views: 1.1ms | ActiveRecord: 17.6ms | Allocations: 7806)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-07-31 06:58:40 +0000
+Processing by Api::V1::Current::UsersController#show as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'test1@example.com' LIMIT 1[0m
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 06:58:40 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+[active_model_serializers] Rendered CurrentUserSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 94ms (Views: 2.5ms | ActiveRecord: 2.8ms | Allocations: 5885)
+
+
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (30.88ms)
+Completed 200 OK in 66ms (Views: 46.7ms | ActiveRecord: 7.0ms | Allocations: 16156)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 06:58:42 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (24.02ms)
+Completed 200 OK in 47ms (Views: 41.8ms | ActiveRecord: 1.8ms | Allocations: 14328)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 07:10:47 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (3.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (144.68ms)
+Completed 200 OK in 176ms (Views: 157.8ms | ActiveRecord: 9.5ms | Allocations: 14442)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-07-31 07:10:50 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 1)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (21.44ms)
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 2.1ms | Allocations: 14328)
+
+
