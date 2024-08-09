@@ -5511,3 +5511,101 @@ Processing by LetterOpenerWeb::LettersController#show as HTML
 Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 620)
 
 
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-08-05 02:22:36 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (5.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'ttrtbs@icloud.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (17.12ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Completed 200 OK in 256ms (Views: 175.5ms | ActiveRecord: 16.7ms | Allocations: 25386)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-08-05 02:25:31 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-08-05 02:25:31 +0000
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'ttrtbs@icloud.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (12.18ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Completed 200 OK in 43ms (Views: 30.1ms | ActiveRecord: 4.2ms | Allocations: 17077)
+
+
+Processing by Api::V1::Current::UsersController#show as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'ttrtbs@icloud.com' LIMIT 1[0m
+[active_model_serializers] Rendered CurrentUserSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Completed 200 OK in 14ms (Views: 1.3ms | ActiveRecord: 2.5ms | Allocations: 3034)
+
+
+Started GET "/api/v1/current/user" for 192.168.65.1 at 2024-08-05 02:25:31 +0000
+Processing by Api::V1::Current::UsersController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'ttrtbs@icloud.com' LIMIT 1[0m
+[active_model_serializers] Rendered CurrentUserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 1.4ms | Allocations: 2355)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-08-05 02:25:41 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'ttrtbs@icloud.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (13.01ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Completed 200 OK in 37ms (Views: 27.6ms | ActiveRecord: 3.5ms | Allocations: 16271)
+
+
+Started GET "/api/v1/articles/?page=1" for 192.168.65.1 at 2024-08-05 02:31:00 +0000
+Processing by Api::V1::ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mArticle Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`status` = 30[0m
+  ↳ app/controllers/concerns/pagination.rb:7:in `pagination'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`uid` = 'ttrtbs@icloud.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`status` = 30 ORDER BY `articles`.`created_at` DESC LIMIT 10 OFFSET 0[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (15.55ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+Completed 200 OK in 37ms (Views: 28.4ms | ActiveRecord: 2.8ms | Allocations: 16122)
+
+
+Started GET "/letter_opener/" for 192.168.65.1 at 2024-08-09 03:49:02 +0000
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering layout /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/letters.html.erb
+  Rendering /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/_item.html.erb (Duration: 54.9ms | Allocations: 1380)
+  Rendered collection of /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/_item.html.erb [1 times] (Duration: 12.0ms | Allocations: 1247)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (Duration: 101.2ms | Allocations: 3150)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_icon.html.erb (Duration: 1.9ms | Allocations: 9)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_bootstrap.html.erb (Duration: 11.5ms | Allocations: 9)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_letters.html.erb (Duration: 0.8ms | Allocations: 9)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/_styles.html.erb (Duration: 20.6ms | Allocations: 198)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/js/_jquery.html.erb (Duration: 4.4ms | Allocations: 14)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/js/_favcount.html.erb (Duration: 1.4ms | Allocations: 11)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/_javascripts.html.erb (Duration: 10.4ms | Allocations: 148)
+  Rendered layout /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/letters.html.erb (Duration: 147.7ms | Allocations: 3724)
+Completed 200 OK in 268ms (Views: 173.7ms | ActiveRecord: 0.0ms | Allocations: 4689)
+
+
