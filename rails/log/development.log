@@ -5609,3 +5609,21 @@ Processing by LetterOpenerWeb::LettersController#index as HTML
 Completed 200 OK in 268ms (Views: 173.7ms | ActiveRecord: 0.0ms | Allocations: 4689)
 
 
+Started GET "/letter_opener/" for 192.168.65.1 at 2024-08-11 05:12:59 +0000
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering layout /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/letters.html.erb
+  Rendering /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/_item.html.erb (Duration: 47.7ms | Allocations: 1380)
+  Rendered collection of /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/_item.html.erb [1 times] (Duration: 8.5ms | Allocations: 1247)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (Duration: 67.0ms | Allocations: 3150)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_icon.html.erb (Duration: 0.7ms | Allocations: 9)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_bootstrap.html.erb (Duration: 6.5ms | Allocations: 9)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/styles/_letters.html.erb (Duration: 1.2ms | Allocations: 9)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/_styles.html.erb (Duration: 32.0ms | Allocations: 198)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/js/_jquery.html.erb (Duration: 10.9ms | Allocations: 14)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/js/_favcount.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/_javascripts.html.erb (Duration: 13.9ms | Allocations: 148)
+  Rendered layout /usr/local/bundle/gems/letter_opener_web-3.0.0/app/views/layouts/letter_opener_web/letters.html.erb (Duration: 146.7ms | Allocations: 3724)
+Completed 200 OK in 198ms (Views: 154.3ms | ActiveRecord: 0.0ms | Allocations: 4689)
+
+

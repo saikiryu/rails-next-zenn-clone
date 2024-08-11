@@ -10,4 +10,3 @@ const SimpleButton: React.FC<SimpleButtonProps> = (props) => {
 }
 
 export default SimpleButton
-s
